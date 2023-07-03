@@ -24,7 +24,7 @@ import deliveryIcon from "../src/imgs/icons/delivery-truck.png";
 import otherIcon from "../src/imgs/icons/other2.png";
 //import allIcon from "../src/imgs/icons/all.png";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer"; //commented out footer
 import FAQPage from "./pages/FAQpage";
 import WhiteLogo from "../src/imgs/logos/white_text.png";
 // import illustrationPost from "../src/imgs/illustrations/post.png";
@@ -262,7 +262,8 @@ function App() {
   } else if (!userInfo) {
     //console.log("loading user info");
     return <div>Loading user information...</div>;
-  } else if (!userInfo) {
+  } else if (!userInfo
+    ) {
     //console.log("user info loaded", userInfo.email);
     return <ProfilePage userInfo={userInfo} />;
   } else {
@@ -384,7 +385,7 @@ function App() {
               <Route path="/FAQpage" element={<FAQPage />} />
             </Routes>
           </div>
-          <Footer />
+          {/* <Footer /> */}
         </BrowserRouter>
       </div>
     );
