@@ -115,6 +115,10 @@ input::file-selector-button{
   margin-top: 0rem;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 752b45d8ed25bf9b0d3f91a4add4f9ae2f01e7df
 .profile-input-field {
   display: flex;
   align-items: center;
@@ -139,11 +143,6 @@ input::file-selector-button{
   flex-grow: 1;
 }
 
-.button-blue,
-.button-green {
-  margin-top: 20px;
-  padding: 10px 20px;
-}
 
 input[type=tel] {
   width: 100%;
@@ -178,7 +177,14 @@ input[type=date] {
     flex-wrap: wrap;
     width: 50%;  /* Adjust to your liking */
   }
-
-  
-  
+}
+.save-changes-button {
+  width: 150px;
+  height: 37px; 
+  background: var(--primary-green);
+  border-radius: 30px;
+  margin: 10px;
+  border: none;
+  color: black;
+  font-size: 16pt;
 }

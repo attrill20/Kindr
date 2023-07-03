@@ -24,7 +24,7 @@ import deliveryIcon from "../src/imgs/icons/delivery-truck.png";
 import otherIcon from "../src/imgs/icons/other2.png";
 //import allIcon from "../src/imgs/icons/all.png";
 import Navbar from "./components/Navbar/Navbar";
-// import Footer from "./components/Footer/Footer"; //commented out footer
+// import Footer from "./components/Footer/Footer";
 import FAQPage from "./pages/FAQpage";
 import WhiteLogo from "../src/imgs/logos/white_text.png";
 // import illustrationPost from "../src/imgs/illustrations/post.png";
@@ -149,7 +149,10 @@ function App() {
         } else {
           for (let i = 0; i < data.length; i++) {
             const userPostcode = data[i].postcode;
-            if (isUKPostcode(userPostcode)) {
+            if (
+              isUKPostcode(userPostcode) &&
+              isUKPostcode(userInfo?.postcode)
+            ) {
               const distance = await getDistance(
                 userPostcode,
                 userInfo?.postcode
@@ -262,10 +265,9 @@ function App() {
   } else if (!userInfo) {
     //console.log("loading user info");
     return <div>Loading user information...</div>;
-  } else if (!userInfo
-    ) {
+  } else if (!userInfo) {
     //console.log("user info loaded", userInfo.email);
-    return <ProfilePage userInfo={userInfo} />;
+    return <ProfilePage userInfo={userInfo} setUserInfo={setUserInfo} />;
   } else {
     //console.log("user first name", userInfo.firstname);
     return (

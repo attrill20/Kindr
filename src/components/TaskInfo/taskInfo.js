@@ -82,11 +82,15 @@ export default function TaskInfo({
   }
 
   function getCreatorName(creatorId) {
-    const creator = allUsers.find((user) => user.id === creatorId);
-    if (creator) {
-      return `${creator.firstname} ${creator.surname}`;
-    } else {
-      return "";
+    // console.log("creator id", creatorId);
+    // console.log("all users", allUsers);
+    if (allUsers) {
+      const creator = allUsers.find((user) => user.id === creatorId);
+      if (creator) {
+        return `${creator.firstname} ${creator.surname}`;
+      } else {
+        return "";
+      }
     }
   }
 
@@ -318,7 +322,7 @@ export default function TaskInfo({
           </div>
         )}
 
-        {!isEditable && (
+        {!isEditable && thisTask.helper_id && (
           <div onClick={() => handleHelperClick()}>
             <strong>Accepted by: </strong>
             <span className="creator-name">

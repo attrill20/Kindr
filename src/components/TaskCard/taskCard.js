@@ -27,7 +27,7 @@ export default function TaskCard({
         return `${creator.distance} miles`;
       }
     }
-    return "unknown";
+    return "unknown distance";
   }
 
   function handleSelectTask(taskId) {
