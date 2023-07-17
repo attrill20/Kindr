@@ -51,3 +51,5 @@ Kindr is deployed on Netlify here: https://kindr.netlify.app/
 
 ​
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
+
+![Screenshot2](/src/imgs/screenshots/Image2.jpg)
